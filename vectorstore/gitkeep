@@ -1,0 +1,2 @@
+# FAISS index is built at runtime via POST /api/rag/ingest.
+# The index files are excluded via .gitignore — only this placeholder is committed.

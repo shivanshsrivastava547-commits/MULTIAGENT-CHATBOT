@@ -1,0 +1,53 @@
+version: "3.9"
+
+services:
+
+  # ── Backend (FastAPI) ────────────────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: runtime           # use the final slim stage
+    container_name: ai_chatbot_backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env          # loads GROQ_API_KEY, TAVILY_API_KEY, etc.
+    environment:
+      - PYTHONUNBUFFERED=1
+      - SQLITE_DB_PATH=/app/data/chatbot.db
+      - FAISS_INDEX_PATH=/app/vectorstore/faiss_index
+    volumes:
+      - chatbot_db:/app/data          # SQLite DB persists across restarts
+      - vectorstore:/app/vectorstore  # FAISS index persists across restarts
+      - backend_logs:/app/logs        # log files persist across restarts
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+  # ── Frontend (React + Vite) ──────────────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile       # we'll add this when building React
+    container_name: ai_chatbot_frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      backend:
+        condition: service_healthy  # wait for backend health check to pass
+
+
+# ── Named volumes (data survives container restarts) ─────────────────────
+volumes:
+  chatbot_db:
+  vectorstore:
+  backend_logs:

@@ -1,0 +1,16 @@
+venv/
+.venv/
+pkg_temp/
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.db
+*.sqlite
+*.sqlite3
+logs/
+data/raw/
+data/faiss_index/
+*.faiss
+*.pkl
+.pytest_cache/

@@ -1,0 +1,2 @@
+# Raw uploaded documents are stored here at runtime.
+# Actual files are excluded via .gitignore — only this placeholder is committed.

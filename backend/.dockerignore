@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# Virtual environment — never copy into image
+venv/
+.venv/
+env/
+
+# Logs — written at runtime inside container
+logs/
+*.log
+
+# Local DB + vectorstore — mounted as volumes in docker-compose
+chatbot.db
+vectorstore/
+
+# Uploaded data — mounted as volume
+data/raw/
+data/processed/
+
+# Tests — not needed in production image
+tests/
+pytest.ini
+.pytest_cache/
+
+# Environment files — injected via docker-compose, never baked in
+.env
+.env.*
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Notebooks
+notebooks/

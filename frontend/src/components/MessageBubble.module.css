@@ -1,0 +1,36 @@
+.para   { margin-bottom: 10px; }
+.para:last-child { margin-bottom: 0; }
+
+.inlineCode {
+  background: #2a2a2a;
+  color: #e2b96f;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 13px;
+}
+
+.codeBlock {
+  background: #1a1a1a;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  overflow-x: auto;
+  margin: 10px 0;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #e0e0e0;
+  white-space: pre;
+}
+.codeBlock code { background: none; padding: 0; color: inherit; white-space: pre; }
+
+.ul  { padding-left: 22px; margin: 8px 0; list-style: disc; }
+.ol  { padding-left: 22px; margin: 8px 0; list-style: decimal; }
+.li  { margin-bottom: 5px; line-height: 1.6; }
+
+.strong { color: var(--text-primary); font-weight: 600; }
+
+.h1 { font-family: var(--font-display); font-size: 20px; font-weight: 700; margin: 14px 0 8px; }
+.h2 { font-family: var(--font-display); font-size: 17px; font-weight: 600; margin: 12px 0 6px; }
+.h3 { font-family: var(--font-display); font-size: 15px; font-weight: 600; margin: 10px 0 4px; }

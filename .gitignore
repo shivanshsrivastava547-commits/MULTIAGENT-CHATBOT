@@ -1,0 +1,57 @@
+# ── Python / Backend ─────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+.venv/
+env/
+*.egg-info/
+dist/
+build/
+.Python
+pip-log.txt
+pkg_temp/
+
+# ── Environment & Secrets ────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Logs ─────────────────────────────────────────────────
+logs/
+*.log
+
+# ── Data / Vector DB ─────────────────────────────────────
+backend/data/raw/
+backend/data/faiss_index/
+*.faiss
+*.pkl
+
+# ── SQLite DB ────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Node / Frontend ──────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/build/
+.npm
+
+# ── OS / Editor ──────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Jupyter ──────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Test & Coverage ──────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
