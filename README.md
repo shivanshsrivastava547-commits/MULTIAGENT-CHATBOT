@@ -1,4 +1,4 @@
-<h1 align="center">NexusAI — Full-Stack AI Platform</h1>
+<h1 align="center">TALKATIVE — Full-Stack AI Platform</h1>
 
 
 # A production-grade AI application with a memory-persistent chatbot, document Q&A (RAG), and a self-critiquing research agent — built with LangGraph, FastAPI, Pinecone, and React.
@@ -7,7 +7,7 @@
 
 ## What This Project Does
 
-NexusAI gives you four AI capabilities in one unified interface:
+TALKATIVE gives you four AI capabilities in one unified interface:
 
 | Feature | What it does |
 |---|---|
@@ -137,8 +137,8 @@ project/
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/nexusai.git
-cd nexusai
+git clone https://github.com/shivanshsrivastava547-commits/MULTIAGENT-CHATBOT.git
+cd MULTIAGENT-CHATBOT
 ```
 
 ### 2. Backend setup
