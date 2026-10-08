@@ -14,3 +14,5 @@ data/faiss_index/
 *.faiss
 *.pkl
 .pytest_cache/
+*.db-shm
+*.db-wal
