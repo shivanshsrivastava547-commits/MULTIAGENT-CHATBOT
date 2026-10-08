@@ -48,7 +48,7 @@ export default function Home({ onNavigate }) {
   return (
     <div className={styles.page}>
       <div className={styles.header}>
-        <div className={styles.badge}>◆ NexusAI</div>
+        <div className={styles.badge}>◆ TALKATIVE</div>
         <h1 className={styles.title}>Your AI Intelligence Layer</h1>
         <p className={styles.subtitle}>Four powerful tools. One unified interface.</p>
       </div>

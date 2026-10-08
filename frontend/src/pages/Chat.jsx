@@ -118,7 +118,7 @@ export default function Chat() {
             value={input}
             onChange={e => setInput(e.target.value)}
             onKeyDown={handleKey}
-            placeholder="Message NexusAI…"
+            placeholder="Message TALKATIVE"
             rows={1}
             disabled={loading}
           />

@@ -39,7 +39,7 @@ export default function App() {
           >
             <span /><span /><span />
           </button>
-          <span className={styles.mobileLogoText}>NexusAI</span>
+          <span className={styles.mobileLogoText}>TALKATIVE</span>
           <span className={styles.mobileLogoIcon}>◆</span>
         </header>
 

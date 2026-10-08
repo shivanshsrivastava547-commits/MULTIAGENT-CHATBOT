@@ -18,7 +18,7 @@ export default function Sidebar({ page, onNavigate, isOpen, onClose }) {
       {/* Logo */}
       <div className={styles.logo}>
         <span className={styles.logoIcon}>◆</span>
-        <span className={styles.logoText}>NexusAI</span>
+        <span className={styles.logoText}>TALKATIVE</span>
       </div>
 
       {/* New chat button */}
@@ -74,7 +74,7 @@ export default function Sidebar({ page, onNavigate, isOpen, onClose }) {
       {/* Footer */}
       <div className={styles.footer}>
         <div className={styles.footerAvatar}>N</div>
-        <span className={styles.footerName}>Nitesh</span>
+        <span className={styles.footerName}>SHIVANSH</span>
       </div>
     </aside>
   )
